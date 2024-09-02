@@ -40,6 +40,7 @@ export default function TableHistory({ title, data }) {
                       <th scope="row">{index + 1}</th>
                       <td className="text-center">{parseFloat(item.temp)}°C</td>
                       <td className="text-center">{parseFloat(item.humi)}%</td>
+                      <td className="text-center">{item.typeMode}</td>
                       <td className="text-center">
                         <BadgeStatus
                           text={item.fan}
@@ -52,7 +53,6 @@ export default function TableHistory({ title, data }) {
                           className={parseStatusBadge(item.pump)}
                         />
                       </td>
-                      <td className="text-center">{item.typeMode}</td>
                       <td className="text-center">{parseTime(item.waktu)}</td>
                       <td className="text-center">{parseDate(item.waktu)}</td>
                     </tr>

@@ -50,6 +50,6 @@ export default function SwitchControl({ title, status, setStatus }) {
 
 SwitchControl.propTypes = {
   title: PropTypes.string.isRequired,
-  status: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]).isRequired,
+  status: PropTypes.oneOfType([PropTypes.number]).isRequired,
   setStatus: PropTypes.func,
 };

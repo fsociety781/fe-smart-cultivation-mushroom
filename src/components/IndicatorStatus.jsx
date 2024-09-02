@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import PropTypes from "prop-types";
 
-export default function IndicatorStatus({ title, value }) {
+export default function IndicatorStatus({ title, value, text }) {
   useEffect(() => {
     console.log(`${title}: ${value}`);
-  }, [title, value]);
+  }, [title, value, text]);
 
   return (
     <div className="card text-bg-light">
@@ -17,11 +17,11 @@ export default function IndicatorStatus({ title, value }) {
             <i className="bi bi-slash-circle h2 text-danger m-0"></i>
           )}
           <p className="m-0">
-            Indicator is{" "}
+            {text + " "}
             {value ? (
-              <span className="fw-bold text-decoration-underline">on</span>
+              <span className="fw-bold text-decoration-underline">Nyala</span>
             ) : (
-              <span className="fw-medium">off</span>
+              <span className="fw-medium">Mati</span>
             )}
           </p>
         </div>

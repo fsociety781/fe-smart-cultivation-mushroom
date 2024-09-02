@@ -101,8 +101,8 @@ export const APEX_OPTIONS = {
 export const TABLE_HISTORY_FIELD = [
   "Suhu",
   "Kelembaban",
-  "Fan",
-  "Pump",
+  "Kipas",
+  "Pompa",
   "Mode",
   "Waktu",
   "Tanggal",

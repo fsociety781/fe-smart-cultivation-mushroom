@@ -225,7 +225,7 @@ export default function Dashboard() {
 
       <div className="row my-4">
         <div id="tabel-history" className="col-12 px-3">
-          <TableHistory title={"History"} data={history?.data ?? []} />
+          <TableHistory title={"Histori"} data={history?.data ?? []} />
         </div>
       </div>
 
@@ -234,14 +234,16 @@ export default function Dashboard() {
           <div className="row mb-3">
             <div className="col-6">
               <IndicatorStatus
-                title={"Indicator Fan"}
+                title={"Indikator Kipas"}
                 value={indicatorStatus?.data.fan ?? 0}
+                text={"Kipas"}
               />
             </div>
             <div className="col-6">
               <IndicatorStatus
-                title={"Indicator Pump"}
+                title={"Indikator Pompa"}
                 value={indicatorStatus?.data.pump ?? 0}
+                text={"Pompa"}
               />
             </div>
           </div>
@@ -249,14 +251,14 @@ export default function Dashboard() {
           <div className="row row-gap-3">
             <div className="col-12 col-sm-6">
               <SwitchControl
-                title="Switch Fan"
+                title="Saklar Kipas"
                 status={switchControlFan?.data.fan ?? 0}
                 setStatus={handleSwitchControlFan}
               />
             </div>
             <div className="col-12 col-sm-6">
               <SwitchControl
-                title="Switch Pump"
+                title="Saklar Pompa"
                 status={switchControlPump?.data.pump ?? 0}
                 setStatus={handleSwitchControlPump}
               />
@@ -268,7 +270,7 @@ export default function Dashboard() {
           <div className="row row-gap-3">
             <div className="col-12 col-sm-6 col-lg-12">
               <SwitchMode
-                title="Control Mode"
+                title="Mode Kontrol"
                 value={switchMode?.data.mode ?? "auto"}
                 setValue={handleSwitchMode}
               />
@@ -276,7 +278,7 @@ export default function Dashboard() {
 
             <div className="col-12 col-sm-6 col-lg-12">
               <SwitchSchedule
-                title="Schedule Mode"
+                title="Mode Penjadwalan"
                 status={switchScheduleMode?.data.status ?? false}
                 setStatus={handleSwitchScheduleMode}
                 value={switchSchedule?.data.schedule ?? "modeSchedule1"}
