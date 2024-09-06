@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import Logo from "../assets/icons/react.svg";
+import Logo from "../assets/icons/scm.svg";
 import Constants from "../routes/constants";
 
 export default function sidebar() {
@@ -16,8 +16,8 @@ export default function sidebar() {
           <img
             src={Logo}
             alt="Logo"
-            width="30"
-            height="24"
+            width="50"
+            height="50"
             className="d-inline-block align-text-top"
           />
           SCM
@@ -39,7 +39,7 @@ export default function sidebar() {
               return isActive ? "nav-link active" : "btn btn-dark text-start";
             }}
           >
-            Setpoint
+            {/* Setpoint */}
           </NavLink>
         </nav>
       </div>

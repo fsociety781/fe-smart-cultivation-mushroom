@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Constants from "../routes/constants";
 import { handlerCanvas } from "../utlis/sidebar";
-import Logo from "../assets/icons/react.svg";
+import Logo from "../assets/icons/scm.svg";
 
 export default function Navbar() {
   const btnCloseRef = useRef(null);

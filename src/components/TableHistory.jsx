@@ -37,10 +37,9 @@ export default function TableHistory({ title, data }) {
                 data?.map((item, index) => {
                   return (
                     <tr key={index}>
-                      <th scope="row">{index + 1}</th>
+                      <td scope="row">{index + 1}</td>
                       <td className="text-center">{parseFloat(item.temp)}°C</td>
                       <td className="text-center">{parseFloat(item.humi)}%</td>
-                      <td className="text-center">{item.typeMode}</td>
                       <td className="text-center">
                         <BadgeStatus
                           text={item.fan}
@@ -53,6 +52,7 @@ export default function TableHistory({ title, data }) {
                           className={parseStatusBadge(item.pump)}
                         />
                       </td>
+                      <td className="text-center">{item.typeMode}</td>
                       <td className="text-center">{parseTime(item.waktu)}</td>
                       <td className="text-center">{parseDate(item.waktu)}</td>
                     </tr>
@@ -80,6 +80,7 @@ TableHistory.propTypes = {
   title: PropTypes.string,
   data: PropTypes.arrayOf(
     PropTypes.shape({
+      no: PropTypes.number.isRequired,
       temp: PropTypes.number.isRequired,
       humi: PropTypes.number.isRequired,
       waktu: PropTypes.string.isRequired,
