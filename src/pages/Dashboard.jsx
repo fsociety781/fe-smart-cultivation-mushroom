@@ -288,6 +288,10 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-    </div>
+
+      <footer className="mt-5 text-center">
+      <p>&copy; 2024 Raihan Muhammad Saprudin</p>
+      </footer>
+    </div>  
   );
 }
